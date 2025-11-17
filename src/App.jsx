@@ -2,6 +2,7 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Home'
 import Telugu from './pages/Telugu'
+import All from './pages/All'
 import Hindi from './pages/Hindi'
 import Kannada from './pages/Kannada'
 import Malayalam from './pages/Malayalam'
@@ -22,6 +23,7 @@ function App () {
         </h1>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/all' element={<All />} />
           <Route path='/telugu' element={<Telugu />} />
           <Route path='/hindi' element={<Hindi />} />
           <Route path='/kannada' element={<Kannada />} />

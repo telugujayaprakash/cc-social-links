@@ -7,9 +7,14 @@ import malayalam from './assets/malayalam.png'
 import kannada from './assets/kannada.png'
 import bhojpuri from './assets/bojpuri.png'
 import bengali from './assets/bengali.png'
+import cclogo1 from './assets/cc_logo.png'
 
 function Home () {
   const cat = [
+    {
+      lang: 'all',
+      img: cclogo1
+    },
     {
       lang: 'telugu',
       img: telugu
@@ -46,7 +51,7 @@ function Home () {
           return (
             <Link to={`/${category.lang}`} key={index}>
               <div className='bg-red-400 rounded-2xl shadow-red-800 w-fit hover:scale-105 transition transform duration-200 shadow-lg'>
-                <div className='group overflow-hidden relative  flex justify-center items-center h-56 w-80 origin-bottom-right rounded-2xl outline -outline-offset-8'>
+                <div className='group overflow-hidden relative  flex justify-center items-center h-56 w-80 origin-bottom-right rounded-2xl outline'>
                   <div>
                     <img src={category.img} alt={category.lang} />
                     <div className='z-10 flex flex-col items-center gap-2'>

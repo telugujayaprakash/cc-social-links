@@ -9,17 +9,17 @@ function Telugu () {
     {
       name: 'Instagram',
       logo: insta,
-      link: 'https://www.instagram.com/chitramcinematelugu/?hl=en'
+      link: 'https://www.instagram.com/chitramcinema'
     },
     {
       name: 'facebook',
       logo: fblogo,
-      link: 'https://www.facebook.com/chitramcinematelugu'
+      link: 'https://www.facebook.com/chitramcinema'
     },
     {
       name: 'youtube',
       logo: ytlogo,
-      link: 'https://www.youtube.com/@ChitramCinemaTelugu'
+      link: 'https://www.youtube.com/@chitramcinema'
     }
   ]
   return (
