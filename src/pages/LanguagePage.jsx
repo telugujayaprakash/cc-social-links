@@ -32,7 +32,7 @@ function LanguagePage () {
             <button
               className='w-full md:w-1/2 flex justify-center gap-3 p-3 mt-4 text-white 
               bg-linear-to-r from-blue-500 to-purple-500 rounded-lg 
-              hover:scale-105 transition duration-300 shadow-lg'
+              hover:scale-105 transition duration-300 shadow-lg cursor-pointer'
             >
               <img src={item.logo} alt={item.name} className='w-6 h-6' />
               {item.name}
@@ -42,7 +42,7 @@ function LanguagePage () {
       </div>
 
       <Link to='/'>
-        <button className='bg-red-500 p-2 rounded-2xl w-full md:w-auto flex justify-center mt-6 text-white'>
+        <button className='bg-red-500 p-2 rounded-2xl w-full md:w-auto flex justify-center mt-6 text-white cursor-pointer'>
           ⬅️ Back
         </button>
       </Link>

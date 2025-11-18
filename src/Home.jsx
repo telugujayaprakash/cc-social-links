@@ -10,7 +10,7 @@ import cclogo1 from './assets/cc_logo.webp'
 
 function Home () {
   const cat = [
-    { lang: 'all', img: cclogo1 },
+    { lang: 'official', img: cclogo1 },
     { lang: 'telugu', img: telugu },
     { lang: 'tamil', img: tamil },
     { lang: 'hindi', img: hindi },
