@@ -35,16 +35,6 @@ function Home () {
                 alt={category.lang}
                 className='object-cover w-full h-full'
               />
-
-              {/* Hover overlay */}
-              <div
-                className='absolute inset-0 bg-black/50 flex items-center justify-center 
-                              opacity-0 group-hover:opacity-100 transition-opacity duration-300'
-              >
-                <span className='text-white text-xl sm:text-2xl md:text-3xl font-bold uppercase'>
-                  {category.lang}
-                </span>
-              </div>
             </div>
           </div>
         </Link>
