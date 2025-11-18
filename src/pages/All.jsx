@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import insta from '../assets/insta-logo.png'
-import fblogo from '../assets/fb-logo.png'
-import ytlogo from '../assets/youtube-logo.png'
+import insta from '../assets/insta-logo.webp'
+import fblogo from '../assets/fb-logo.webp'
+import ytlogo from '../assets/youtube-logo.webp'
 
 function Telugu () {
   const social = [

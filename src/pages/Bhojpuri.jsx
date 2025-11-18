@@ -1,8 +1,7 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import insta from '../assets/insta-logo.png'
-import fblogo from '../assets/fb-logo.png'
-import ytlogo from '../assets/youtube-logo.png'
+import insta from '../assets/insta-logo.webp'
+import fblogo from '../assets/fb-logo.webp'
+import ytlogo from '../assets/youtube-logo.webp'
 
 function Bhojpuri () {
   const social = [
@@ -35,7 +34,7 @@ function Bhojpuri () {
               className='w-full flex justify-center'
             >
               <button
-                className='w-full md:w-1/2 flex justify-center gap-3 p-3 mt-4 text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg hover:scale-105 transition transform duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
+                className='w-full md:w-1/2 flex justify-center gap-3 p-3 mt-4 text-white bg-linear-to-r from-blue-500 to-purple-500 rounded-lg hover:scale-105 transition transform duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
                 type='button'
               >
                 <img src={item.logo} alt='' className='w-6 h-6' />

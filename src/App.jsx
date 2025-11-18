@@ -9,7 +9,7 @@ import Malayalam from './pages/Malayalam'
 import Bengali from './pages/Bengali'
 import Tamil from './pages/Tamil'
 import Bhojpuri from './pages/Bhojpuri'
-import cclogo from './assets/cc_logo.png'
+import cclogo from './assets/cc_logo.webp'
 
 function App () {
   return (

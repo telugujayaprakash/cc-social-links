@@ -1,13 +1,12 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
-import telugu from './assets/telugu.png'
-import tamil from './assets/tamil.png'
-import hindi from './assets/hindi.png'
-import malayalam from './assets/malayalam.png'
-import kannada from './assets/kannada.png'
-import bhojpuri from './assets/bojpuri.png'
-import bengali from './assets/bengali.png'
-import cclogo1 from './assets/cc_logo.png'
+import telugu from './assets/telugu.webp'
+import tamil from './assets/tamil.webp'
+import hindi from './assets/hindi.webp'
+import malayalam from './assets/malayalam.webp'
+import kannada from './assets/kannada.webp'
+import bhojpuri from './assets/bojpuri.webp'
+import bengali from './assets/bengali.webp'
+import cclogo1 from './assets/cc_logo.webp'
 
 function Home () {
   const cat = [
@@ -46,25 +45,27 @@ function Home () {
   ]
   return (
     <>
-      <div className='md:grid-cols-3 grid grid-cols-1 gap-5 md:ml-30 ml-5'>
-        {cat.map((category, index) => {
-          return (
-            <Link to={`/${category.lang}`} key={index}>
-              <div className='bg-red-400 rounded-2xl shadow-red-800 w-fit hover:scale-105 transition transform duration-200 shadow-lg'>
-                <div className='group overflow-hidden relative  flex justify-center items-center h-56 w-80 origin-bottom-right rounded-2xl outline'>
-                  <div>
-                    <img src={category.img} alt={category.lang} />
-                    <div className='z-10 flex flex-col items-center gap-2'>
-                      <span className='text-slate-400 text-6xl font-bold'>
-                        Telugu
-                      </span>
-                    </div>
-                  </div>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-5 ml-5 md:ml-28'>
+        {cat.map((category, index) => (
+          <Link to={`/${category.lang}`} key={index}>
+            <div className='bg-red-400 rounded-2xl shadow-red-800 hover:scale-105 transition duration-200 shadow-lg w-80'>
+              <div className='relative overflow-hidden h-56 w-80 rounded-2xl flex justify-center items-center'>
+                <img
+                  src={category.img}
+                  alt={category.lang}
+                  className='object-cover h-full w-full'
+                />
+
+                {/* Overlay text */}
+                <div className='absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition'>
+                  <span className='text-white text-4xl font-bold'>
+                    {category.lang}
+                  </span>
                 </div>
               </div>
-            </Link>
-          )
-        })}
+            </div>
+          </Link>
+        ))}
       </div>
     </>
   )
