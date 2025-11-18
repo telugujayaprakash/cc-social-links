@@ -10,64 +10,46 @@ import cclogo1 from './assets/cc_logo.webp'
 
 function Home () {
   const cat = [
-    {
-      lang: 'all',
-      img: cclogo1
-    },
-    {
-      lang: 'telugu',
-      img: telugu
-    },
-    {
-      lang: 'tamil',
-      img: tamil
-    },
-    {
-      lang: 'hindi',
-      img: hindi
-    },
-    {
-      lang: 'malayalam',
-      img: malayalam
-    },
-    {
-      lang: 'kannada',
-      img: kannada
-    },
-    {
-      lang: 'bhojpuri',
-      img: bhojpuri
-    },
-    {
-      lang: 'bengali',
-      img: bengali
-    }
+    { lang: 'all', img: cclogo1 },
+    { lang: 'telugu', img: telugu },
+    { lang: 'tamil', img: tamil },
+    { lang: 'hindi', img: hindi },
+    { lang: 'malayalam', img: malayalam },
+    { lang: 'kannada', img: kannada },
+    { lang: 'bhojpuri', img: bhojpuri },
+    { lang: 'bengali', img: bengali }
   ]
-  return (
-    <>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-5 ml-5 md:ml-28'>
-        {cat.map((category, index) => (
-          <Link to={`/${category.lang}`} key={index}>
-            <div className='bg-red-400 rounded-2xl shadow-red-800 hover:scale-105 transition duration-200 shadow-lg w-80'>
-              <div className='relative overflow-hidden h-56 w-80 rounded-2xl flex justify-center items-center'>
-                <img
-                  src={category.img}
-                  alt={category.lang}
-                  className='object-cover h-full w-full'
-                />
 
-                {/* Overlay text */}
-                <div className='absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition'>
-                  <span className='text-white text-4xl font-bold'>
-                    {category.lang}
-                  </span>
-                </div>
+  return (
+    <div className='px-4 md:px-20 mt-5 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+      {cat.map((category, index) => (
+        <Link to={`/${category.lang}`} key={index}>
+          <div
+            className='bg-red-400 rounded-2xl shadow-red-800 hover:scale-[1.04]
+                          transition-transform duration-300 shadow-lg group'
+          >
+            <div className='relative overflow-hidden h-40 sm:h-48 md:h-56 rounded-2xl'>
+              <img
+                loading='lazy'
+                src={category.img}
+                alt={category.lang}
+                className='object-cover w-full h-full'
+              />
+
+              {/* Hover overlay */}
+              <div
+                className='absolute inset-0 bg-black/50 flex items-center justify-center 
+                              opacity-0 group-hover:opacity-100 transition-opacity duration-300'
+              >
+                <span className='text-white text-xl sm:text-2xl md:text-3xl font-bold uppercase'>
+                  {category.lang}
+                </span>
               </div>
             </div>
-          </Link>
-        ))}
-      </div>
-    </>
+          </div>
+        </Link>
+      ))}
+    </div>
   )
 }
 
